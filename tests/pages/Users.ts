@@ -309,7 +309,7 @@ export class Users {
   }
 
   async assertUserDeleted(userId: number) {
-    await expect(this.page.getByText(userId.toString(), { exact: true })).not.toBeVisible();
+    await expect(this.page.getByRole('cell', {name: userId.toString(), exact: true })).not.toBeVisible();
   }
 
   async assertAllUsersDeleted() {
