@@ -1,14 +1,14 @@
 import { test } from '@playwright/test';
 import { LoginPage } from './pages/LoginPage';
 
-test('авторизация в приложении', async ({ page }) => {
+test('Р°РІС‚РѕСЂРёР·Р°С†РёСЏ РІ РїСЂРёР»РѕР¶РµРЅРёРё', async ({ page }) => {
   const loginPage = new LoginPage(page);
   await loginPage.goto();
   const mainPage = await loginPage.login('username', 'password');
   await mainPage.assertMainContentLorem();
 });
 
-test('выход из приложения', async ({ page }) => {
+test('РІС‹С…РѕРґ РёР· РїСЂРёР»РѕР¶РµРЅРёСЏ', async ({ page }) => {
   const loginPage = new LoginPage(page);
   await loginPage.goto();
   const mainPage = await loginPage.login('username', 'password');
