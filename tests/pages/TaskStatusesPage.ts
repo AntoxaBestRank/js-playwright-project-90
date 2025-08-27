@@ -1,10 +1,5 @@
 import { Page, expect } from '@playwright/test';
-
-export interface TaskStatus {
-  id: number;
-  name: string;
-  slug: string;
-}
+import { TaskStatus } from '../interfaces';
 
 export class TaskStatusesPage {
   readonly page: Page;

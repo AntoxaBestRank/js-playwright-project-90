@@ -1,34 +1,7 @@
-import { test, expect } from '@playwright/test';
+import { test } from '@playwright/test';
 import { LoginPage } from './pages/LoginPage';
-import { TaskStatusesPage, TaskStatus } from './pages/TaskStatusesPage';
-
-const listStatuses: TaskStatus[] = [
-  {
-    "id": 1,
-    "name": "Draft",
-    "slug": "draft",
-  },
-  {
-    "id": 2,
-    "name": "To Review",
-    "slug": "to_review",
-  },
-  {
-    "id": 3,
-    "name": "To Be Fixed",
-    "slug": "to_be_fixed",
-  },
-  {
-    "id": 4,
-    "name": "To Publish",
-    "slug": "to_publish",
-  },
-  {
-    "id": 5,
-    "name": "Published",
-    "slug": "published",
-  }
-];
+import { TaskStatusesPage } from './pages/TaskStatusesPage';
+import { listStatuses } from './data';
 
 // Хук beforeEach для общей настройки перед каждым тестом
 test.beforeEach(async ({ page }) => {

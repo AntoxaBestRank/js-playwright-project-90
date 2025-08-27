@@ -1,17 +1,5 @@
 import { Page, expect } from '@playwright/test';
-
-export type UserFormData = {
-  email: string;
-  firstName: string;
-  lastName: string;
-};
-
-export type UserData = {
-  id: number;
-  email: string;
-  firstName: string;
-  lastName: string;
-};
+import { UserData, UserFormData } from '../interfaces';
 
 export class Users {
   readonly page: Page;

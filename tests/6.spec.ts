@@ -1,29 +1,7 @@
-import { test, expect } from '@playwright/test';
+import { test } from '@playwright/test';
 import { LoginPage } from './pages/LoginPage';
-import { LabelsPage, Label } from './pages/LabelsPage';
-
-const listLabels: Label[] = [
-    {
-        "id": 1,
-        "name": "bug",
-    },
-    {
-        "id": 2,
-        "name": "feature",
-    },
-    {
-        "id": 3,
-        "name": "enhancement",
-    },
-    {
-        "id": 4,
-        "name": "task",
-    },
-    {
-        "id": 5,
-        "name": "critical",
-    }
-];
+import { LabelsPage } from './pages/LabelsPage';
+import { listLabels } from './data';
 
 // Хук beforeEach для общей настройки перед каждым тестом
 test.beforeEach(async ({ page }) => {

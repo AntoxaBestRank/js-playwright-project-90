@@ -1,9 +1,5 @@
 import { Page, expect } from '@playwright/test';
-
-export interface Label {
-  id: number;
-  name: string;
-}
+import { Label } from '../interfaces';
 
 export class LabelsPage {
   readonly page: Page;
